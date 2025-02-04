@@ -1,1 +1,7 @@
-pub enum Tokens {}
+pub enum Tokens {
+    LET,
+    IDENT,
+    ASSIGN,
+    INT,
+    SEMICOLON,
+}
