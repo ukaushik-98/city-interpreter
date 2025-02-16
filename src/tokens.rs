@@ -13,18 +13,18 @@ pub enum TokenLiterals<'a> {
     INT(&'a str),
 }
 
-pub enum TokenOperators {
-    ASSIGN(char),
-    PLUS(char),
+pub enum TokenOperators<'a> {
+    ASSIGN(&'a str),
+    PLUS(&'a str),
 }
 
-pub enum TokenDelimeters {
-    COMMA(char),
-    SEMICOLON(char),
-    LPAREN(char),
-    RPAREN(char),
-    LBRACE(char),
-    RBRACE(char),
+pub enum TokenDelimeters<'a> {
+    COMMA(&'a str),
+    SEMICOLON(&'a str),
+    LPAREN(&'a str),
+    RPAREN(&'a str),
+    LBRACE(&'a str),
+    RBRACE(&'a str),
 }
 
 pub enum TokenExtra<'a> {
@@ -35,7 +35,7 @@ pub enum TokenExtra<'a> {
 pub enum Tokens<'a> {
     Keywords(TokenKeywords<'a>),
     Literals(TokenLiterals<'a>),
-    Operators(TokenOperators),
-    Delimeters(TokenDelimeters),
+    Operators(TokenOperators<'a>),
+    Delimeters(TokenDelimeters<'a>),
     Extra(TokenExtra<'a>),
 }
